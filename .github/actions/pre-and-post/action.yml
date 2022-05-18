@@ -1,0 +1,16 @@
+name: PreAndPost
+description: Action that shows messages pre, main and post
+inputs:
+  premessage:
+    required: true
+  message:
+    required: true
+  postmessage:
+    required: true
+  
+runs:
+  using: "node16"
+  pre: 'setup.js'
+  main: 'index.js'
+  post: 'cleanup.js' 
+    
