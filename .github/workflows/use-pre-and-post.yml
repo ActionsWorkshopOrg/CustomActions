@@ -18,8 +18,14 @@ jobs:
         name: Get sources
       - name: Just an echo
         run: echo "the step after checkout"
-      - uses: ./.github/actions/pre-and-post
+      - uses: ActionsWorkshopOrg/CustomActions/.github/actions/pre-and-post@main
         name: Run the custom action
+        with:
+          premessage: Let's start!
+          message: We are just in the midle
+          postmessage: Finishing!
+      - uses: ./.github/actions/pre-and-post
+        name: Run the custom action locally (without pre)
         with:
           premessage: Let's start!
           message: We are just in the midle
